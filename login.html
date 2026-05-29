@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logistika Sohasi Haqida To'liq Ma'lumot</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f9;
+            color: #333;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1a237e, #0d47a1);
+            color: white;
+            padding: 50px 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background: white;
+            margin-bottom: 30px;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        h2 {
+            color: #1a237e;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #1a237e;
+        }
+
+        h3 {
+            color: #0d47a1;
+            font-size: 1.3em;
+            margin: 20px 0 10px 0;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: #f8f9ff;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid #1a237e;
+        }
+
+        .card h4 {
+            color: #1a237e;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .card .icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #1a237e;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f6ff;
+        }
+
+        .highlight {
+            background: #fff3cd;
+            padding: 15px 20px;
+            border-left: 5px solid #ffc107;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+
+        .salary-box {
+            background: linear-gradient(135deg, #e8eaf6, #c5cae9);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        .salary-box h4 {
+            color: #1a237e;
+            margin-bottom: 10px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #e8eaf6;
+            color: #1a237e;
+            padding: 5px 12px;
+            border-radius: 20px;
+            margin: 3px;
+            font-size: 0.9em;
+        }
+
+        .stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .stat-item {
+            flex: 1;
+            min-width: 200px;
+            background: linear-gradient(135deg, #1a237e, #0d47a1);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .stat-item .number {
+            font-size: 2em;
+            font-weight: bold;
+            display: block;
+        }
+
+        .stat-item .label {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+
+        footer {
+            background: #1a237e;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 40px;
+        }
+
+        .steps {
+            counter-reset: step;
+            list-style: none;
+        }
+
+        .steps li {
+            counter-increment: step;
+            padding: 15px;
+            margin-bottom: 10px;
+            background: #f8f9ff;
+            border-radius: 8px;
+            position: relative;
+            padding-left: 50px;
+        }
+
+        .steps li::before {
+            content: counter(step);
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #1a237e;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+            section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>📦 Logistika Sohasi: To'liq Qo'llanma</h1>
+        <title="Logistika sohasi haqida barcha ma'lumotlar">
+
+    <div class="container">
+
+        <!-- 1. LOGISTIKA NIMA? -->
+        <section id="what-is">
+            <h2>📋 1. Logistika Nima?</h2>
+            <p><strong>Logistika</strong> — bu tovarlar, xizmatlar va ma'lumotlarning ishlab chiqarish nuqtasidan iste'molchigacha bo'lgan samarali harakati, saqlanishi va boshqarilishini rejalashtirish, amalga oshirish va nazorat qilish jarayonidir.</p>
+
+            <div class="highlight">
+                <strong>💡 Muhim:</strong> Logistika nafaqat yuk tashish, balki butun ta'minot zanjirini (Supply Chain) boshqarishni o'z ichiga oladi. Bu soha global iqtisodiyotning asosiy tayanchidir.
+            </div>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="number">$9.5 trln</span>
+                    <span class="label">Global logistika bozori hajmi (2025)</span>
+                </div>
+                <div class="stat-item">
+                    <span class="number">60 mln+</span>
+                    <span class="label">Dunyoda logistika xodimlari</span>
+                </div>
+                <div class="stat-item">
+                    <span class="number">8-12%</span>
+                    <span class="label">Yillik o'sish sur'ati</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. LOGISTIKA SOHALARI -->
+        <section id="branches">
+            <h2>🏗️ 2. Logistikaning Asosiy Sohalari</h2>
+
+            <div class="grid">
+                <div class="card">
+                    <div class="icon">🚚</div>
+                    <h4>Transport Logistika</h4>
+                    <p>Yuklarni turli transport vositalari (avtomobil, temir yo'l, havo, dengiz) orqali tashishni tashkil etish. Eng katta va asosiy yo'nalish.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">🏭</div>
+                    <h4>Ombor Logistika</h4>
+                    <p>Tovarlarni omborlarda saqlash, inventarizatsiya qilish, joylashtirish va boshqarish. WMS tizimlari bilan ishlash.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">📊</div>
+                    <h4>Ta'minot Zanjiri (Supply Chain)</h4>
+                    <p>Xom ashyo sotib olishdan to tayyor mahsulotni yetkazib berishgacha bo'lgan barcha jarayonlarni boshqarish.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">🛒</div>
+                    <h4>Distributsiya</h4>
+                    <p>Mahsulotlarni ulgurji va chakana savdo nuqtalariga taqsimlash, distribyutorlik tarmog'ini yaratish.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">🌐</div>
+                    <h4>Xalqaro Logistika</h4>
+                    <p>Import va eksport operatsiyalari, bojxona rasmiylashtiruvi, xalqaro yuk tashish va hujjatlar bilan ishlash.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">🔄</div>
+                    <h4>Teskari Logistika (Reverse)</h4>
+                    <p>Qaytarilgan mahsulotlarni qayta ishlash, ta'mirlash yoki utilizatsiya qilish jarayonlari.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">📦</div>
+                    <h4>Yig'ish va Qadoqlash</h4>
+                    <p>Buyurtmalarni yig'ish (picking), qadoqlash, markirovka qilish va jo'natishga tayyorlash.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">📱</div>
+                    <h4>E-commerce Logistika</h4>
+                    <p>Onlayn savdo uchun yetkazib berish, oxirgi mil (last-mile) logistika, qaytarish jarayonlari.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">❄️</div>
+                    <h4>Sovuq Zanjir (Cold Chain)</h4>
+                    <p>Oziq-ovqat va dori-darmonlarni ma'lum haroratda tashish va saqlash. Maxsus jihozlar talab qilinadi.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">⚠️</div>
+                    <h4>Xavfli Yuk Logistika</h4>
+                    <p>Kimyoviy, yonuvchi, radioaktiv va boshqa xavfli yuklarni maxsus qoidalar asosida tashish.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">🚢</div>
+                    <h4>Multimodal Logistika</h4>
+                    <p>Bir nechta transport turini birlashtirgan holda yuk tashish (masalan: dengiz + temir yo'l + avto).</p>
+                </div>
+                <div class="card">
+                    <div class="icon">📈</div>
+                    <h4>Logistika Konsalting</h4>
+                    <p>Kompaniyalarga logistika jarayonlarini optimallashtirish, xarajatlarni kamaytirish bo'yicha maslahatlar berish.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. DAROMAD MA'LUMOTLARI -->
+        <section id="salary">
+            <h2>💰 3. Logistika Sohasida Daromad</h2>
+
+            <h3>🇺🇿 O'zbekistonda O'rtacha Oylik Maoshlar (2025-2026)</h3>
+            <div class="salary-box">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Lavozim</th>
+                            <th>Boshlang'ich</th>
+                            <th>O'rta</th>
+                            <th>Yuqori / Ekspert</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Logistika operatori</td>
+                            <td>3-5 mln so'm</td>
+                            <td>5-8 mln so'm</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Logistika menejeri</td>
+                            <td>5-8 mln so'm</td>
+                            <td>8-15 mln so'm</td>
+                            <td>15-25 mln so'm</td>
+                        </tr>
+                        <tr>
+                            <td>Transport menejeri</td>
+                            <td>5-7 mln so'm</td>
+                            <td>7-12 mln so'm</td>
+                            <td>12-20 mln so'm</td>
+                        </tr>
+                        <tr>
+                            <td>Ombor boshlig'i</td>
+                            <td>6-10 mln so'm</td>
+                            <td>10-18 mln so'm</td>
+                            <td>18-30 mln so'm</td>
+                        </tr>
+                        <tr>
+                            <td>Xalqaro logistika mutaxassisi</td>
+                            <td>8-12 mln so'm</td>
+                            <td>12-20 mln so'm</td>
+                            <td>20-35 mln so'm</td>
+                        </tr>
+                        <tr>
+                            <td>Ta'minot zanjiri direktori (SCM)</td>
+                            <td>-</td>
+                            <td>15-25 mln so'm</td>
+                            <td>25-50+ mln so'm</td>
+                        </tr>
+                        <tr>
+                            <td>Logistika konsultanti</td>
+                            <td>10-15 mln so'm</td>
+                            <td>15-30 mln so'm</td>
+                            <td>30-60+ mln so'm</td>
+                        </tr>
+                        <tr>
+                            <td>Frayt forearder (broker)</td>
+                            <td>5-10 mln so'm</td>
+                            <td>10-25 mln so'm</td>
+                            <td>25-50+ mln so'm</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>🌍 Xalqaro Bozorda O'rtacha Yillik Maoshlar (AQSh/Evropa)</h3>
+            <div class="salary-box">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Lavozim</th>
+                            <th>AQSh (yillik)</th>
+                            <th>Evropa (yillik)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Logistika koordinator</td>
+                            <td>$40,000 - $60,000</td>
+                            <td>€30,000 - €45,000</td>
+                        </tr>
+                        <tr>
+                            <td>Logistika menejeri</td>
+                            <td>$60,000 - $90,000</td>
+                            <td>€45,000 - €70,000</td>
+                        </tr>
+                        <tr>
+                            <td>Supply Chain Manager</td>
+                            <td>$80,000 - $120,000</td>
+                            <td>€60,000 - €90,000</td>
+                        </tr>
+                        <tr>
+                            <td>Logistika Direktori (VP)</td>
+                            <td>$120,000 - $200,000+</td>
+                            <td>€90,000 - €150,000+</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="highlight">
+                <strong>📌 Eslatma:</strong> Daromad tajriba, bilim darajasi, kompaniya hajmi va lokatsiyaga qarab sezilarli farq qiladi. Xalqaro kompaniyalar va multinational korporatsiyalar odatda yuqoriroq maosh taklif qiladi.
+            </div>
+        </section>
+
+        <!-- 4. KERAKLI KO'NIKMALAR -->
+        <section id="skills">
+            <h2>🎯 4. Kerakli Ko'nikmalar va Bilimlar</h2>
+
+            <h3>🧠 Professional Ko'nikmalar (Hard Skills)</h3>
+            <div class="grid">
+                <div class="card">
+                    <h4>📊 Dasturiy Tizimlar</h4>
+                    <p>SAP, Oracle SCM, WMS, TMS, ERP tizimlari bilan ishlash. Excel (ilg'or daraja) — mutlaqo zarur.</p>
+                </div>
+                <div class="card">
+                    <h4>📐 Ma'lumotlar Tahlili</h4>
+                    <p>Power BI, Tableau, SQL bilan ishlash. Ma'lumotlarga asoslangan qarorlar qabul qilish qobiliyati.</p>
+                </div>
+                <div class="card">
+                    <h4>🌍 Xalqaro Qoidalar</h4>
+                    <p>Incoterms 2020, bojxona qonunchiligi, xalqaro savdo hujjatlari, sug'urta masalalari.</p>
+                </div>
+                <div class="card">
+                    <h4>🚛 Transport Bilimi</h4>
+                    <p>Transport turlari, marshrutlashtirish, yuklarni hisoblash, konteyner turlari va ulardan foydalanish.</p>
+                </div>
+            </div>
+
+            <h3>🤝 Shaxsiy Ko'nikmalar (Soft Skills)</h3>
+            <div style="margin-top: 15px;">
+                <span class="tag">Muammolarni hal qilish</span>
+                <span class="tag">Muloqot ko'nikmalari</span>
+                <span class="tag">Stressga chidamlilik</span>
+                <span class="tag">Ko'p vazifalarni boshqarish</span>
+                <span class="tag">Jamoa bilan ishlash</span>
+                <span class="tag">Vaqtni boshqarish</span>
+                <span class="tag">Diqqatli va aniqlik</span>
+                <span class="tag">Negotsiatsiya ko'nikmasi</span>
+                <span class="tag">Tahliliy fikrlash</span>
+                <span class="tag">Liderlik</span>
+            </div>
+
+            <h3>🎓 Ta'lim va Sertifikatlar</h3>
+            <ul>
+                <li><strong>Oliy ta'lim:</strong> "Logistika", "Ta'minot zanjirini boshqarish", "Transport iqtisodiyoti" yo'nalishlari</li>
+                <li><strong>CSCP</strong> — Certified Supply Chain Professional (APICS/ASCM)</li>
+                <li><strong>CLTD</strong> — Certified in Logistics, Transportation and Distribution</li>
+                <li><strong>CPIM</strong> — Certified in Production and Inventory Management</li>
+                <li><strong>Six Sigma</strong> — Jarayonlarni optimallashtirish bo'yicha sertifikat</li>
+                <li><strong>FIATA</strong> — Xalqaro freight forwarding sertifikati</li>
+            </ul>
+        </section>
+
+        <!-- 5. KARYERA IMKONIYATLARI -->
+        <section id="career">
+            <h2>🚀 5. Karyera Imkoniyatlari va O'sish Yo'li</h2>
+
+            <h3>Karyera Bosqichlari</h3>
+            <ol class="steps">
+                <li><strong>Boshlang'ich (0-2 yil):</strong> Logistika operatori, koordinator, dispatcher — asosiy jarayonlarni o'rganish</li>
+                <li><strong>O'rta (2-5 yil):</strong> Logistika menejeri, transport menejeri, ombor boshlig'i — mustaqil boshqaruv</li>
+                <li><strong>Katta mutaxassis (5-8 yil):</strong> Ta'minot zanjiri menejeri, loyiha rahbari, mintaqa menejeri</li>
+                <li><strong>Yuqori (8-15 yil):</strong> Logistika direktori, SCM direktori, operatsion direktor (COO)</li>
+                <li><strong>Ekspert (15+ yil):</strong> VP of Supply Chain, mustaqil konsultant, biznes egasi</li>
+            </ol>
+
+            <h3>💼 Ish Topish Mumkin Bo'lgan Sohalari</h3>
+            <div class="grid">
+                <div class="card">
+                    <h4>🏢 Logistika Kompaniyalari</h4>
+                    <p>DHL, FedEx, Kuehne+Nagel, DB Schenker, maҳalliy transport va logistika firmalari</p>
+                </div>
+                <div class="card">
+                    <h4>🛍️ Retail va E-commerce</h4>
+                    <p>Uzum Market, TechMart, supermarketlar tarmog'i, onlayn savdo platformalari</p>
+                </div>
+                <div class="card">
+                    <h4>🏭 Ishlab chiqarish</h4>
+                    <p>Avtomobilsozlik, oziq-ovqat, kimyo, qurilish materiallari, farmatsevtika</p>
+                </div>
+                <div class="card">
+                    <h4>🛢️ Neft va Gaz</h4>
+                    <p>Neft-kimyo kompaniyalari, energiya sektori — yuqori daromadli soha</p>
+                </div>
+                <div class="card">
+                    <h4>🏗️ Qurilish</h4>
+                    <p>Qurilish materiallarini ta'minlash, loyiha logistika boshqaruvi</p>
+                </div>
+                <div class="card">
+                    <h4>🏥 Sog'liqni Saqlash</h4>
+                    <p>Pharma logistika, tibbiy uskunalar ta'minoti, sovuq zanjir boshqaruvi</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. TRENDLAR VA KELAJAK -->
+        <section id="trends">
+            <h2>🔮 6. Zamonaviy Trendlar va Kelajak</h2>
+
+            <div class="grid">
+                <div class="card">
+                    <div class="icon">🤖</div>
+                    <h4>AI va Avtomatlashtirish</h4>
+                    <p>Sun'iy intellekt orqali talabni bashorat qilish, avtomatik marshrutlashtirish, robotlashtirilgan omborlar (Amazon kabi).</p>
+                </div>
+                <div class="card">
+                    <div class="icon">📡</div>
+                    <h4>IoT (Internet of Things)</h4>
+                    <p>Yuklarni real vaqtda kuzatish (GPS, RFID sensorlar), harorat nazorati, holat monitoringi.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">🔗</div>
+                    <h4>Blockchain</h4>
+                    <p>Shaffof ta'minot zanjiri, hujjatlar autentifikatsiyasi, firibgarlikning oldini olish, smart kontraktlar.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">🌱</div>
+                    <h4>Yashil Logistika</h4>
+                    <p>Elektr transport vositalari, uglerod izini kamaytirish, qayta ishlanadigan qadoqlash, barqaror ta'minot.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">🚁</div>
+                    <h4>Dronlar va Robotlar</h4>
+                    <p>Drone orqali yetkazib berish, omborlarda avtonom robotlar, so'nggi mil innovatsiyalari.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">📊</div>
+                    <h4>Katta Ma'lumotlar (Big Data)</h4>
+                    <p>Ma'lumotlarga asoslangan qarorlar, bashoratli analitika, real vaqt monitoringi.</p>
+                </div>
+            </div>
+
+            <div class="highlight">
+                <strong>🔥 Eng talabgir yo'nalishlar 2025-2030:</strong> AI-logistika, yashil logistika, e-commerce logistika, sovuq zanjir, avtomatlashtirilgan omborlar, xavfsizlik logistika
+            </div>
+        </section>
+
+        <!-- 7. O'ZBEKISTONDA LOGISTIKA -->
+        <section id="uzbekistan">
+            <h2>🇺🇿 7. O'zbekistonda Logistika Holati</h2>
+
+            <h3>📊 Bozor Haqida</h3>
+            <ul>
+                <li>O'zbekiston Markaziy Osiyoda logistika markazi bo'lishga intilmoqda</li>
+                <li>Trans-Afg'on transport yo'lagi loyihasi joriy etilmoqda</li>
+                <li>Xitoy-Qirg'iziston-O'zbekiston temir yo'li qurilmoqda</li>
+                <li>"O'zbekiston Temir Yo'llari" AJ faoliyat kengaytirmoqda</li>
+                <li>Navoiy erkin iqtisodiy zonasida logistika markazlar rivojlanmoqda</li>
+                <li>Toshkent logistika markazi mintaqaviy ahamiyatga ega</li>
+            </ul>
+
+            <h3>🏢 Yirik Logistika Kompaniyalar</h3>
+            <ul>
+                <li><strong>DHL Express Uzbekistan</strong> — xalqaro yetkazib berish</li>
+                <li><strong>Uzbekistan Airways Cargo</strong> — havo yuklari</li>
+                <li><strong>Trans-O'zbekiston</strong> — ichki va xalqaro tashish</li>
+                <li><strong>UzLogistics</strong> — kompleks logistika xizmatlari</li>
+                <li><strong>Uzum Logistics</strong> — e-commerce yetkazib berish</li>
+                <li><strong>Yandex Go / Taxi</strong> — shahar ichi logistika</li>
+            </ul>
+
+            <div class="highlight">
+                <strong>📈 Prognoz:</strong> O'zbekistonda logistika bozori 2030 yilga kelib 2 baravar o'sishi kutilmoqda. Bu soha eng tez rivojlanayotgan sektorlardan biri hisoblanadi.
+            </div>
+        </section>
+
+        <!-- 8. QANDAY BOSHLASH KERAK -->
+        <section id="how-to-start">
+            <h2>🎓 8. Logistika Sohasiga Qanday Kirish Mumkin?</h2>
+
+            <h3>Boshlovchilar uchun Yo'l Xaritasi</h3>
+            <ol class="steps">
+                <li><strong>Ta'lim oling:</strong> Logistika, iqtisodiyot, transport yoki biznes boshqaruvi yo'nalishlarida ta'lim oling</li>
+                <li><strong>Til o'rganing:</strong> Ingliz tili (RCE darajasi), rus tili, xitoy tili — qo'shimcha afzallik</li>
+                <li><strong>Dasturlarni o'zlashtiring:</strong> Excel, SAP, WMS, TMS tizimlari bilan tanishing</li>
+                <li><strong>Amaliyot o'tang:</strong> Logistika kompaniyalarida stajirovka yoki amaliyot o'tang</li>
+                <li><strong>Networking:</strong> LinkedIn'da logistika mutaxassislari bilan bog'laning, konferentsiyalarda qatnashing</li>
+                <li><strong>Kichik lavozimdan boshlang:</strong> Operator, koordinator sifatida ishga kiring va tajriba to'plang</li>
+                <li><strong>Sertifikat oling:</strong> CSCP, CLTD yoki boshqa xalqaro sertifikatlar oling</li>
+                <li><strong>Doimiy o'rganing:</strong> Soha trendlarini kuzating, yangi texnologiyalarni o'zlashtiring</li>
+            </ol>
+
+            <h3>📚 Foydali Resurslar</h3>
+            <ul>
+                <li><strong>Kitoblar:</strong> "Logistics and Supply Chain Management" — Martin Christopher</li>
+                <li><strong>Kurslar:</strong> Coursera, edX, LinkedIn Learning'da logistika kurslari</li>
+                <li><strong>Forumlar:</strong> Supply Chain Digital, Logistics Management</li>
+                <li><strong>Platformalar:</strong> ASCM (APICS), CSCMP, FIATA</li>
+                <li><strong>YouTube:</strong> Logistika bo'yicha professional kanallar va vebinarlar</li>
+            </ul>
+        </section>
+
+        <!-- 9. AFZALLIKLAR VA KAMCHILIKLAR -->
+        <section id="pros-cons">
+            <h2>⚖️ 9. Logistika Sohasining Afzalliklari va Kamchiliklari</h2>
+
+            <div class="grid">
+                <div class="card" style="border-left-color: #2e7d32;">
+                    <h4 style="color: #2e7d32;">✅ Afzalliklari</h4>
+                    <ul>
+                        <li>Barqaror va o'sib borayotgan soha</li>
+                        <li>Yuqori daromad imkoniyatlari</li>
+                        <li>Xalqaro karyera imkoniyati</li>
+                        <li>Turli sanoat sohalari bilan ishlash</li>
+                        <li>Tez karyera o'sishi mumkin</li>
+                        <li>Amaliy va dinamik ish muhiti</li>
+                        <li>Texnologiyalar bilan ishlash</li>
+                        <li>Tadbirkorlik uchun keng imkoniyat</li>
+                    </ul>
+                </div>
+                <div class="card" style="border-left-color: #c62828;">
+                    <h4 style="color: #c62828;">❌ Kamchiliklari</h4>
+                    <ul>
+                        <li>Yuqori stress darajasi (deadline bosimi)</li>
+                        <li>Nostandart ish grafigi (ba'zan 24/7)</li>
+                        <li>Kutish kutilmagan muammolar</li>
+                        <li>Boshlanishida past maosh</li>
+                        <li>Doimiy o'rganish talabi</li>
+                        <li>Javobgarlik yuqori</li>
+                        <li>Bozor sharoitlariga bog'liqlik</li>
+                        <li>Fizik jihatdan charchatishi mumkin</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. XULOSA -->
+        <section id="conclusion">
+            <h2>🎯 10. Xulosa</h2>
+            <p>Logistika — bu kelajagi porloq, barqaror va yuqori daromadli soha. Global savdo o'sib borishi, e-commerce rivojlanishi va texnologik innovatsiyalar bilan logistika mutaxassislariga talab har doim yuqori bo'lib qoladi.</p>
+
+            <div class="highlight">
+                <strong>💡 Maslahat:</strong> Agar siz dinamik ish muhitini yoqtirsangiz, muammolarni hal qilishni yoqtirsangiz va doimiy o'sishga intilsangiz — logistika sohasi siz uchun ideal tanlov bo'lishi mumkin!
+            </div>
+
+            <p>Eng muhimi — <strong>doimiy o'rganish</strong>, <strong>amaliy tajriba</strong> to'plash va <strong>networking</strong> qilish. Bu soha nazariyadan ko'ra amaliy ko'nikmalarni qadrlaydi.</p>
+
+            <p style="text-align: center; font-size: 1.5em; margin-top: 30px;">🚀 <strong>Logistika — kelajak kasbi!</strong> 📦</p>
+        </section>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>📦 Logistika Sohasi: To'liq Qo'llanma | 2026</p>
+        <p>Bu ma'lumotlar umumiy xarakterga ega bo'lib, aniq raqamlar vaqt o'tishi bilan o'zgarishi mumkin.</p>
+    </footer>
+
+</body>
+</html>
